@@ -158,12 +158,12 @@ $email->from('foo@example.com')
 ## Casting
 For casting use:
 
-* (bool) - Cast to boolean.
-* (int) - Cast to integer.
-* (float) - Cast to float.
-* (string) - Cast to string.
-* (array) - Cast to array.
-*(object) - Cast to object.
+* `(bool)` - Cast to boolean.
+* `(int)` - Cast to integer.
+* `(float)` - Cast to float.
+* `(string)` - Cast to string.
+* `(array)` - Cast to array.
+* `(object)` - Cast to object.
 
 Please use `(int)$var` instead of `intval($var)` and `(float)$var` instead of `floatval($var)` when applicable.
 
@@ -224,6 +224,8 @@ You can also combine types using the pipe char:
 ```
 int|bool
 ```
+When combining types it is recommended to order them by the primary expectation in descending order.
+
 For more than two types it is usually best to just use `mixed`.
 
 In the description itself the verbose versions of `int` and `bool` are used:
