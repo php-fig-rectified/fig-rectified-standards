@@ -326,8 +326,42 @@ In short:
 * 100 characters is the soft limit.
 * 120 characters is the hard limit.
 
-## Files
+## Other
+
+### Files
 File names which do not contain classes should be lowercased and underscored, for example:
 ```
 long_file_name.php
+```
+
+### HTML
+All tags and attributes are lowercase.
+
+### CSS
+Definition ideally as dashed name:
+- class: .some-class-name
+- id: #some-id-to-an-element
+
+Both with lowercase characters (although classes are not case-sensitive, id’s are!), the separator is minus [-].
+You can use underscore [_] if it makes the separation of the identifier and the record id easier. E.g. `my-id_33`.
+It will become necessary to do so if you use UUIDs (which contain minus chars).
+
+Note: ids should be unique on the current page – so don’t use them for iterating elements.
+In general all styling should be class based. Ids are often abused for that.
+But they usually serve the purpose of being identifiable via JS.
+So they should ideally be mainly used for dynamic JS scripts.
+
+Do not name the fields after their style, but after the function/meaning – as the style
+can change and will result in things like `.red { color: yellow;}`.
+
+Good Example:
+```css
+span.success {
+    /* color: green; // not any more */
+    color: dark-green;
+}
+div.important {
+    /* font-weight: bold; // not any more */
+    font-size: 14px;
+}
 ```
