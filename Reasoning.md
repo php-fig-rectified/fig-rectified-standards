@@ -24,26 +24,26 @@ Compare
 <?php
 class Foo extends Bar implements FooInterface
 {
-    public function sampleFunction($a, $b = null)
-    {
-        if ($a === $b)
-				{
-            bar();
-        }
-				elseif ($a > $b)
-				{
-            $foo->bar($arg1);
-        }
-				else
-				{
-            BazClass::bar($arg2, $arg3);
-        }
-    }
+	public function sampleFunction($a, $b = null)
+	{
+		if ($a === $b)
+		{
+			bar();
+		}
+		elseif ($a > $b)
+		{
+			$foo->bar($arg1);
+		}
+		else
+		{
+			BazClass::bar($arg2, $arg3);
+		}
+	}
 
-    final public static function bar()
-    {
-        // method body
-    }
+	final public static function bar()
+	{
+		// method body
+	}
 }
 ```
 
@@ -52,19 +52,19 @@ with
 ```php
 class Foo extends Bar implements FooInterface {
 
-    public function sampleFunction($a, $b = null) {
-        if ($a === $b) {
-            bar();
-        } elseif ($a > $b) {
-            $foo->bar($arg1);
-        } else {
-            BazClass::bar($arg2, $arg3);
-        }
-    }
+	public function sampleFunction($a, $b = null) {
+		if ($a === $b) {
+			bar();
+		} elseif ($a > $b) {
+			$foo->bar($arg1);
+		} else {
+			BazClass::bar($arg2, $arg3);
+		}
+	}
 
-    final public static function bar() {
-        // method body
-    }
+	final public static function bar() {
+		// method body
+	}
 
 }
 ```
