@@ -14,7 +14,8 @@ regarding these additions and as such are notices here as best practice recommen
 ## Properties and variables.
 
 * Properties and variables should be in $StudlyCaps or $camelBacked style.
-The first should only be used for objects.
+The first should only be used for objects. In some cases properties can also be `$snake_case`,
+but should be avoided if possible.
 
 ### Example
 ```php
