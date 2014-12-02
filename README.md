@@ -18,8 +18,8 @@ of guidance making it the "de-facto standard" these days.
 
 ## Content
 
-- PSR-2-R ("PSR-2 with tabs and consistent brace style")
-- PSR-2-R Additions - optional coding standard recommendations
+- [PSR-2-R] ("PSR-2 with tabs and consistent brace style")
+- [PSR-2-R Additions] - optional coding standard recommendations
 
 ## TODOs
 
@@ -33,3 +33,5 @@ of guidance making it the "de-facto standard" these days.
 See the original [FIG] repo.
 
 [FIG]: https://github.com/php-fig/fig-standards
+[PSR-2-R] PSR-2-R-coding-style-guide.md
+[PSR-2-R Additions] PSR-2-R-coding-style-guide-additions.md

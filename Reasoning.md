@@ -69,7 +69,8 @@ class Foo extends Bar implements FooInterface {
 }
 ```
 
-Even with additional newlines before and after each method, the second one reads cleaner and better.
+Even with additional newlines before and after each method, the second one reads cleaner and better - or at least
+just as good - without taking that much screen height.
 
 And mixing them is out of the question as its inconsistent and doesn't make sense.
 So the second (opening brace at the end of the SAME line) one is recommended.
