@@ -99,10 +99,6 @@ environments
 * Always have a single newline at the beginning and end of each class/trait, resulting from a newline
 above and below each method.
 
-### Example
-
-This example encompasses some of the rules below as a quick overview:
-
 ```php
 class Foo extends Bar implements FooInterface {
 
@@ -117,7 +113,26 @@ class Foo extends Bar implements FooInterface {
 }
 
 ```
+### Strings and Concatination
 
+`'` or `"`? Both work, as long as they are used consistent throughout a file.
+It is recommended to use the single `'` – as `"` is for HTML attributes and parses variables.
+
+Don't use variables inside strings – they are better splitted like that:
+```php
+echo 'A string with ' . $someVariable . ' and ' . SOME_CONSTANT . '!';
+echo '<a href="example.org" title="' . $title . '">Link</a>';
+```
+
+In case a string contains `'`, it is applicable to switch to `"` here to avoid
+the usage of `\` escapes:
+```php
+$sql = "UPDATE TABLE 'foo' SET ContactName='Alfred Schmidt', City='Hamburg' WHERE ...";
+
+Use a space before and after `.`:
+```php
+$myString = 'a string' . $variable . 'more string stuff etc';
+```
 
 ## Typehinting
 Arguments that expect objects, arrays or callbacks (callable) can be typehinted. We only typehint public methods, though, as typehinting is not cost-free:
@@ -283,6 +298,14 @@ public function foo($input, $anotherInput = null) {
 }
 
 ```
+
+### Avoid `private` for class methods/properties
+Most of the time `private` is used too eagerly, where `protected` would suffice.
+Allow extending classes to extend the code. Don't assume it doesn't have to.
+This is especially important for vendor libraries that people would like to enhance or
+customize in their applications.
+
+Read some more about it [here](http://aperiplus.sourceforge.net/visibility.php).
 
 ## Example Addresses
 For all example URL and mail addresses use `example.com`, `example.org` and `example.net`, for example:
