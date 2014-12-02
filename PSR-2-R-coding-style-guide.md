@@ -187,6 +187,7 @@ use OtherVendor\OtherPackage\BazClass;
 class ClassName extends ParentClass implements \ArrayAccess, \Countable {
 
     // constants, properties, methods
+
 }
 ```
 
@@ -208,6 +209,7 @@ class ClassName extends ParentClass implements
     \Serializable {
 
     // constants, properties, methods
+
 }
 ```
 

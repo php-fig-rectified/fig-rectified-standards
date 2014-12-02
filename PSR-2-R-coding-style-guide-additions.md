@@ -170,6 +170,13 @@ Please use `(int)$var` instead of `intval($var)` and `(float)$var` instead of `f
 All comments should be written in English, and should in a clear way
 describe the commented block of code.
 
+Inline code should use `//` and a single space afterwards.
+Use sentences with a capital first letter and a full stop if possible:
+```php
+// This is a nice inline comment.
+$this->doSomehing();
+```
+
 Comment blocks, with the exception of the first block in a file, should always be preceded by a newline.
 
 ### Tags

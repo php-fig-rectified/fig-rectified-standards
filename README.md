@@ -4,7 +4,7 @@ or "FIG-R"
 
 The idea behind the group is to fix errors made in the actual FIG PSRs and to retify those
 before it's too late.
-~If other folks want to adopt what we’re doing they are welcome to do so, but that is not the aim.~
+~If other folks want to adopt what we're doing they are welcome to do so, but that is not the aim.~
 If other folks feel forced to adopt what we’re doing they are welcome to
 do so, and the most certainly will :P Right?
 
