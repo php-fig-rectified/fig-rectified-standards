@@ -113,6 +113,7 @@ class Foo extends Bar implements FooInterface {
 }
 
 ```
+
 ### Strings and Concatination
 
 `'` or `"`? Both work, as long as they are used consistent throughout a file.
@@ -128,6 +129,7 @@ In case a string contains `'`, it is applicable to switch to `"` here to avoid
 the usage of `\` escapes:
 ```php
 $sql = "UPDATE TABLE 'foo' SET ContactName='Alfred Schmidt', City='Hamburg' WHERE ...";
+```
 
 Use a space before and after `.`:
 ```php
