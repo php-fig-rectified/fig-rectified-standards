@@ -337,6 +337,30 @@ File names which do not contain classes should be lowercased and underscored, fo
 long_file_name.php
 ```
 
+### .editorconfig
+The following is recommended to be put in your root dir (where composer.json is, as well) as `.editorconfig` file:
+
+# This file is for unifying the coding style for different editors and IDEs
+# editorconfig.org
+```
+root = true
+
+[*]
+end_of_line = lf
+charset = utf-8
+indent_style = tab
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.bat]
+end_of_line = crlf
+
+[*.yml]
+indent_style = space
+indent_size = 2
+```
+YML files unfortunately are only valid with a 2 space indentation.
+
 ### HTML
 All tags and attributes are lowercase.
 
