@@ -145,7 +145,7 @@ Arguments that expect objects, arrays or callbacks (callable) can be typehinted.
  * @param Model $Model The model to use.
  * @param array $array Some array value.
  * @param callable $callback Some callback.
- * @param boolean $boolean Some boolean value.
+ * @param bool $boolean Some boolean value.
  */
 public function foo(Model $Model, array $array, callable $callback, $boolean) {
 }
@@ -245,13 +245,14 @@ When combining types it is recommended to order them by the primary expectation 
 
 For more than two types it is usually best to just use `mixed`.
 
-In the description itself the verbose versions of `int` and `bool` are used:
+In the description itself the verbose versions of `int` and `bool` are used.
+Use sentences with a capital first letter and a full stop if possible:
 ```php
 /**
  * Returns output of input.
  *
  * @param int|bool $input Input as integer or boolean value.
- * @return int|bool Output
+ * @return int|bool Output pretty much the same.
  */
 public function foo($input) {
     return $input;
