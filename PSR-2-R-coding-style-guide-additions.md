@@ -340,9 +340,9 @@ long_file_name.php
 ### .editorconfig
 The following is recommended to be put in your root dir (where composer.json is, as well) as `.editorconfig` file:
 
+```
 # This file is for unifying the coding style for different editors and IDEs
 # editorconfig.org
-```
 root = true
 
 [*]
