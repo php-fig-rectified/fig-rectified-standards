@@ -114,6 +114,28 @@ class Foo extends Bar implements FooInterface {
 
 ```
 
+### Inter-Line Alignment
+Don't use inter-line alignment. It is
+
+a) Not useful in combination with tabs as indentation (and personal length adjustment of it).
+b) Very bad for change diffs, as it creates a lot of noise. It is also additional work.
+
+```php
+public function bar() {
+	$foo = 'bar';
+	$bazdib = 'gir';
+	$zim = 'irk';
+
+	$varname = '1234' . aVeryLongFunctionName()
+		. 'foo' . otherFunction();
+}
+```
+The aligment would have to completely change for the above three variables, if one of them
+would be named longer, renaming all involved and aligned variables with it. Bad idea.
+
+The second example would result in the same issue. So always use simple spaces for inline and
+one-tab indents for multiline aligments.
+
 ### Strings and Concatination
 
 `'` or `"`? Both work, as long as they are used consistent throughout a file.
