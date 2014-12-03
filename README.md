@@ -16,6 +16,10 @@ They knew it and always talked it down as "internal group decisions" not affecti
 world. But they very well knew it would at some point, as more and more adopt to it due to a lack
 of guidance making it the "de-facto standard" these days.
 
+People are not taking a library, framework or code seriously these days, just because
+it is not complying to FIG PSR(-2), but using tabs (as they always have and always should have).
+This addresses this issue in the PHP community.
+
 ## Content
 
 - [PSR-2-R](PSR-2-R-coding-style-guide.md) - "PSR-2 with tabs and consistent brace style"
