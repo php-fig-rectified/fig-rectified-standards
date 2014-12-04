@@ -72,8 +72,10 @@ So why sticking to it? Rationally, there is no reason.
 In the end it is what it is: People stick to what they are used to.
 They are used to spaces, so they cling on to it for the last 25 years, no matter
 how wrong that may be these days. It would cost them a `str_place()` call to move on, but that won't happen.
+
 And with FIG and it's PSR as "de-facto" standard now things only got worse, as it is now written in stone that
 nothing should change.
+The discussion back then can be found [here](https://github.com/php-fig/fig-standards/pull/91) and [here](https://github.com/php-fig/fig-standards/pull/35).
 
 FIG already swallowed 70% of the PHP projects, the remaining 30% using tabs already tumble.
 Let's try to stand up for the tabs before they are unrightfully eliminated further.
