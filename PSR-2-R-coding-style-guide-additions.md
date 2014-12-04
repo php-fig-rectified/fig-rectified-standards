@@ -327,10 +327,13 @@ public function foo($input, $anotherInput = null) {
 ### Avoid `private` for class methods/properties
 Most of the time `private` is used too eagerly, where `protected` would suffice.
 Allow extending classes to extend the code. Don't assume it doesn't have to.
-This is especially important for vendor libraries that people would like to enhance or
+This is especially important for frameworks or vendor libraries that people would like to enhance or
 customize in their applications.
 
 Read some more about it [here](http://aperiplus.sourceforge.net/visibility.php).
+
+In case you are acquainted with the "Open/Close Principle", it is in some cases OK to use
+private to define clear public interfaces for classes.
 
 ## Example Addresses
 For all example URL and mail addresses use `example.com`, `example.org` and `example.net`, for example:
