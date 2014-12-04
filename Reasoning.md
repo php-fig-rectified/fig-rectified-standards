@@ -72,8 +72,11 @@ class Foo extends Bar implements FooInterface {
 Even with additional newlines before and after each method, the second one reads cleaner and better - or at least
 just as good - without taking that much screen height.
 
-And mixing them is out of the question as its inconsistent and doesn't make sense.
+And mixing them (as FIG proposes) is out of the question as its inconsistent and doesn't make sense.
 So the second (opening brace at the end of the SAME line) one is recommended.
+
+Also note that you can use the additional vertical space won, to "smartly" group with additional newlines now.
+E.g. in logical blocks. That further enhances the readability.
 
 ## Additions
 Many topics have not been addressed in the FIG PSR-2 (which is not a bad thing), but this might leave a void
@@ -87,3 +90,13 @@ See this guide as an alternative to the FIG one, if that one doesn't fit you.
 Once we create a critical mass of followers of this "modern standards", I bet some frameworks, that
 recently felt forced to throw their very same standards over board and to join FIG, will be back on board.
 Making the PHP coding standard again what it should have been for years.
+
+
+## What FIG *should* have done
+The voting members should not have mixed their frameworks's ancient ways of doing things.
+That usually leads to inconsistent (as proven by them) guides - and later standards.
+Instead, they should have decided reasonably towards a sane standard (tabs + consistent brace style) and
+then (quickly or slowly) migrated their code towards this now improved coding standard.
+CakePHP could have been such a role model, as they have been using such a standard from the very beginning
+(as the very first real PHP framework), so for over 10+ years.
+Their vote has been diminished by the other voting members.
