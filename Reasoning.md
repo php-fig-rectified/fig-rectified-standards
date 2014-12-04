@@ -80,7 +80,7 @@ E.g. in logical blocks. That further enhances the readability.
 
 ## Additions
 Many topics have not been addressed in the FIG PSR-2 (which is not a bad thing), but this might leave a void
-or indeterminacy. Those recommendations are mainly based on the CakePHP coding standards (as well as both topics above)
+or indeterminacy. Those recommendations are mainly based on the CakePHP1+2 coding standards (as well as both topics above)
 and suit as a very reasonable standard.
 
 ## Contributions
