@@ -8,7 +8,7 @@ before it's too late.
 If other folks feel forced to adopt what we're doing they are welcome to
 do so, and the most certainly will :P Right?
 
-## Why?
+## Why FIG-R and PSR-2-R?
 Because it seems to be necessary.
 
 First of all FIG itself did make mistakes in their drafts resulting in a wrong standard now.
