@@ -29,7 +29,7 @@ This addresses this issue in the PHP community.
 ## TODOs
 
 - Shining `PSR-2-R` and `FIG-R` badges for the READMEs.
-- PHPCS-Fixer CodeSniffer branch for this.
+- PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards).
 - Undeceive more lost souls.
 - Help to make the FIG people understand what damage they caused (despite all the good things they broad, of course^^).
 
