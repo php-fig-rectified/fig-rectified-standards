@@ -66,6 +66,8 @@ if ($isAdmin) {
 ```
 
 ## PHP Open Tags
+Always use `<?php` instead of `<?`.
+
 Do not use the `<?= ... =>` short tags. They are also difficult to comment out if desired.
 It is better to consistently use
 ```html
@@ -73,7 +75,7 @@ This <?php echo h($var); ?>
 
 Another <?php //echo h($var); ?> commented out one
 ```
-Commenting out with `<!--  -->` should be prevented as it is then visible in the resulting HTML output.
+Commenting out with `<!--  -->` should be avoided as it is then visible in the resulting HTML output.
 
 ## Comparison
 
