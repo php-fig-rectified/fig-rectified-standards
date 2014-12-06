@@ -17,7 +17,6 @@ regarding these additions and as such are notices here as best practice recommen
 The first should only be used for objects. In some cases properties can also be `$snake_case`,
 but should be avoided if possible.
 
-### Example
 ```php
 class Foo {
 
@@ -51,7 +50,7 @@ $variable = isset($options['variable']) ? $options['variable'] : true;
 ```
 
 ## Control Structures
-Do not use keyword control structures. Use parantheses instead.
+Do not use keyword control structures. Use parantheses instead for consistency across all files:
 
 ```php
 // Bad
@@ -65,6 +64,16 @@ if ($isAdmin) {
 }
 
 ```
+
+## PHP Open Tags
+Do not use the `<?= ... =>` short tags. They are also difficult to comment out if desired.
+It is better to consistently use
+```html
+This <?php echo h($var); ?>
+
+Another <?php //echo h($var); ?> commented out one
+```
+Commenting out with `<!--  -->` should be prevented as it is then visible in the resulting HTML output.
 
 ## Comparison
 
@@ -334,6 +343,34 @@ Read some more about it [here](http://aperiplus.sourceforge.net/visibility.php).
 
 In case you are acquainted with the "Open/Close Principle", it is in some cases OK to use
 private to define clear public interfaces for classes.
+
+### Underscores for Private/Protected
+It is not directly disallowed in PSR-2 to have the `_` and `__` visibility prefixes.
+But it says one has a good reason to use them.
+As most IDEs still don't really clearly display (in colors?) the difference between
+public, protected and private, the following would be difficult to read:
+```php
+$x = $this->someAttribute;
+$x = $this->someProtectedAttribute;
+
+$this->callToSomeMethod();
+$this->callToSomeProtectedMethod();
+```
+At first glance it will always be impossible to know what visibility the property or method has.
+
+So it is encouraged to stick to that useful practice to prefix:
+```php
+$x = $this->someAttribute;
+$x = $this->_someProtectedAttribute;
+
+$this->callToSomeMethod();
+$this->_callToSomeProtectedMethod();
+```
+
+Note that `__` is also used for magic calls, and as such this recommendation is best used with the above hint of not using
+private visibility in your code.
+Otherwise please disregard and make sure you use an IDE that can display them properly. Using underscores with a lot of
+private methods will probably be worse than sticking to the PSR-2 recoommendation.
 
 ## Example Addresses
 For all example URL and mail addresses use `example.com`, `example.org` and `example.net`, for example:
