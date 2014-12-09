@@ -7,6 +7,8 @@ regarding these additions and as such are notices here as best practice recommen
 
 [PSR-2-R]: PSR-2-coding-style-guide.md
 
+Note that `[` and `]` (PHP5.4+) are used instead of `array(` and `)` for array declaration;
+
 ## Use Declarations
 
 * Use declarations should be in alphabetical order.
@@ -168,6 +170,51 @@ Use a space before and after `.`:
 ```php
 $myString = 'a string' . $variable . 'more string stuff etc';
 ```
+
+## Multi-line declaration/condition/concatenation
+In this case, the comma is a trailing one, whereas all operators go in the newline as first character:
+```php
+$foo = 'Some String'
+	. ' concatinated';
+
+if (($a == $b)
+	&& ($b == $c)
+	|| (Foo::CONST == $d)
+) {
+	$a = $d;
+}
+```
+
+### Careful with deep arrays
+One mistaked that gets often made:
+```php
+$foo = [[
+	0,
+	1, 2
+], 3, 4];
+```
+This would effectivly change all lines (and their indentation), if the array structure got normalized.
+Arrays also need to minimize effects on the resulting diff, and as such indentation must always be the right one:
+```php
+$foo = [[
+		0,
+		1, 2
+	], 3, 4];
+```
+for example, max. normalized as:
+```php
+$foo = [
+	[
+		0,
+		1,
+		2
+	],
+	3,
+	4
+];
+```
+As you can see, entries like `0` would not need any change on reorganizing, thus reducing overhead in work and making diffs easier to read as
+they only show actual changes made.
 
 ## Typehinting
 Arguments that expect objects, arrays or callbacks (callable) can be typehinted. We only typehint public methods, though, as typehinting is not cost-free:
