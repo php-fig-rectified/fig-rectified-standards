@@ -172,7 +172,7 @@ $myString = 'a string' . $variable . 'more string stuff etc';
 ```
 
 ## Multi-line declaration/condition/concatenation
-In this case, the comma is a trailing one, whereas all operators go in the newline as first character:
+All operators should go in the newline as first character:
 ```php
 $foo = 'Some String'
 	. ' concatinated';
