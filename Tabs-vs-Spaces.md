@@ -13,10 +13,6 @@ Each developer can configure their environment to use a specific tab width he is
 have to adjust to a team's preference when switching teams. This helps productivity as consistent
 behavior helps speed up recognition.
 
-### Smaller File Sizes
-Sure, disk space itself doesn't matter, but bandwidth does, so the view files that contain a lot of indentation are effected the most here.
-If you take a look, most websites actually still don't compress their output.
-
 ### Cursor/Usability
 Easier keyboard navigation for starters.
 It may seem minor, but positionning the text cursor with the mouse at the beginning of the line is
@@ -33,13 +29,17 @@ So in the end it's just so much easier everywhere to use a single char here.
 
 A more detailed list [here](http://base.thomashigginbotham.com/tabs-vs-spaces-why-is-there-a-debate/).
 
+### Smaller File Sizes
+Sure, disk space itself doesn't matter, but bandwidth does, so the view files that contain a lot of indentation are effected the most here.
+If you take a look, most websites actually still don't compress their output.
+
 ## Pro Arguments for Spaces?
 To be fair, the spaces as indentation is usable. But is that enough?
 
 Some people try to defend its usage with the following arguments:
 - Inter-line alignment possible.
 - The same on each editor.
-- Line length easier to uphold.
+- Line length easier to uphold (This argument is easy to counter if you simply count 1 tab as 4 spaces no matter what the end user sets its tab aligment to)
 
 But then again, inter-line alignment is a bad practice with near-to-null advantage
 but with a huge disadvantage: Additional noise in change diffs/patches and possibly more conflicts/work.
@@ -64,7 +64,7 @@ one of *the* biggest argument against spaces:
 Tabs prevent you from alignment (there it really doesn't make sense as they usually list as a contra tab argument) and as bonus:
 - Way less refactoring work, when changing the alignment of an aligned block because of one single line.
 - You have diffs/patches which are much nicer to review (less noise).
-- You will minimize the chance to have conflicts, whether it’s with other patches created before that kind of changes to happen or with others that already have local and uncommitted changes.
+- You will minimize the chance to have conflicts, whether itâ€™s with other patches created before that kind of changes to happen or with others that already have local and uncommitted changes.
 - Blaming files with your VCS, you have the chance to discover the initial of a line much more directly.
 
 ### Why spaces then?
