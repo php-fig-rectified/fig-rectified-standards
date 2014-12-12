@@ -356,7 +356,7 @@ public function foo() {
 * Try to accept and return as few types as possible (mixing integer, boolean, string, array, object etc is usually not too good)
 * Try to return early in methods/functions to avoid unnecessary depths
 
-### Example
+### Example for return early
 ```php
 // Bad
 public function foo($input, $anotherInput = null) {
@@ -420,6 +420,38 @@ Note that `__` is also used for magic calls, and as such this recommendation is 
 private visibility in your code.
 Otherwise please disregard and make sure you use an IDE that can display them properly. Using underscores with a lot of
 private methods will probably be worse than sticking to the PSR-2 recoommendation.
+
+### Return void vs null
+Try to document `@return void` when there is just a `return;`, whereas `return null;` or `return $this->foo();` would be
+`@return null` or alike.
+
+```php
+/**
+ * @param string $input
+ * @return void
+ */
+public function setFoo($input) {
+	if (!$input) {
+		return;
+	}
+	if ($input === 'foofoo') {
+		$this->set('special', $input);
+		return;
+	}
+	$this->set('input', $input);
+}
+
+/**
+ * @param string $var
+ * @return string|null
+ */
+public function get($var) {
+	if (!isset($this->config[$var]) {
+		return null;
+	}
+	return $this->config[$var];
+}
+```
 
 ## Example Addresses
 For all example URL and mail addresses use `example.com`, `example.org` and `example.net`, for example:
