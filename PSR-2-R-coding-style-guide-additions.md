@@ -91,6 +91,7 @@ if ($value === null) {
       // ...
 }
 ```
+
 The value to check against should be placed on the right side:
 ```php
 // Yoda style not recommended
@@ -103,6 +104,12 @@ if ($this->foo() === null) {
     // ...
 }
 ```
+
+### Comparison methods
+Consistenty is key here. The project should use one througout the code. In general stick to the short version.
+
+`is_int()` should be used instead of `is_integer()`.
+Use `is_writable()` instead of `is_writeable()`.
 
 ## Whitespace
 
@@ -263,6 +270,7 @@ For casting use:
 * `(object)` - Cast to object.
 
 Please use `(int)$var` instead of `intval($var)` and `(float)$var` instead of `floatval($var)` when applicable.
+Use `(bool)$var` instead of `!!$var`.
 
 ## Commenting Code
 All comments should be written in English, and should in a clear way
