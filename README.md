@@ -28,13 +28,13 @@ This addresses this issue in the PHP community.
 
 ### PHP Standard Recommendations
 
-| Num | Title                         |
-|:---:|-------------------------------|
-| 0   | [Autoloading Standard][psr0]  |
-| 1   | [Basic Coding Standard][psr1] |
-| 2   | [Coding Style Guide][psr2]    |
-| 3   | [Logger Interface][psr3]      |
-| 4   | [Autoloading Standard][psr4]  |
+| Num | Title                         | Code    |
+|:---:|-------------------------------|---------|
+| 0   | [Autoloading Standard][psr0]  | PSR-0   |
+| 1   | [Basic Coding Standard][psr1] | PSR-1   |
+| 2   | [Coding Style Guide][psr2]    | PSR-2-R |
+| 3   | [Logger Interface][psr3]      | PSR-3   |
+| 4   | [Autoloading Standard][psr4]  | PSR-4   |
 
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
