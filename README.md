@@ -26,6 +26,22 @@ This addresses this issue in the PHP community.
 - [PSR-2-R Additions](PSR-2-R-coding-style-guide-additions.md) - optional coding standard recommendations
 - Reasoning behind it and a spaces-vs-tabs evaluation
 
+### PHP Standard Recommendations
+
+| Num | Title                         |
+|:---:|-------------------------------|
+| 0   | [Autoloading Standard][psr0]  |
+| 1   | [Basic Coding Standard][psr1] |
+| 2   | [Coding Style Guide][psr2]    |
+| 3   | [Logger Interface][psr3]      |
+| 4   | [Autoloading Standard][psr4]  |
+
+[psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
+[psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
+[psr2]: PSR-2-R-coding-style-guide.md
+[psr3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
+[psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
+
 ## TODOs
 
 - Shining `PSR-2-R` and `FIG-R` badges for the READMEs.
