@@ -24,7 +24,7 @@ This addresses this issue in the PHP community.
 
 - [PSR-2-R](PSR-2-R-coding-style-guide.md) - "PSR-2 with tabs and consistent brace style"
 - [PSR-2-R Additions](PSR-2-R-coding-style-guide-additions.md) - optional coding standard recommendations
-- Reasoning behind it and a spaces-vs-tabs evaluation
+- [Reasoning](Reasoning.md) behind it and a spaces-vs-tabs evaluation
 
 ### Badge
 [![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
@@ -53,7 +53,7 @@ You can copy this snippet:
 ## TODOs
 
 - PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards).
-- Undeceive more lost souls. If everyone used PSR-2-R FIG would have to revise their standard.
+- Undeceive more lost souls. If everyone used PSR-2-R, FIG would have to revise their standard.
 - Help to make the FIG people understand what errors they made (and as a result damage they caused by deliberately forming an inconsistent standard) and how they can rectify them.
 
 ## Proposing a Standard Recommendation
