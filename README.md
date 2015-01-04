@@ -26,15 +26,23 @@ This addresses this issue in the PHP community.
 - [PSR-2-R Additions](PSR-2-R-coding-style-guide-additions.md) - optional coding standard recommendations
 - Reasoning behind it and a spaces-vs-tabs evaluation
 
+### Badge
+[![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
+
+You can copy this snippet:
+```
+[![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
+```
+
 ### PHP Standard Recommendations
 
-| Num | Title                         | Code    |
-|:---:|-------------------------------|---------|
-| 0   | [Autoloading Standard][psr0]  | PSR-0   |
-| 1   | [Basic Coding Standard][psr1] | PSR-1   |
-| 2   | [Coding Style Guide][psr2]    | PSR-2-R |
-| 3   | [Logger Interface][psr3]      | PSR-3   |
-| 4   | [Autoloading Standard][psr4]  | PSR-4   |
+| Num | Title                         | Code        |
+|:---:|-------------------------------|-------------|
+| 0   | [Autoloading Standard][psr0]  | PSR-0       |
+| 1   | [Basic Coding Standard][psr1] | PSR-1       |
+| 2   | [Coding Style Guide][psr2]    | **PSR-2-R** |
+| 3   | [Logger Interface][psr3]      | PSR-3       |
+| 4   | [Autoloading Standard][psr4]  | PSR-4       |
 
 [psr0]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-0.md
 [psr1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
@@ -44,10 +52,9 @@ This addresses this issue in the PHP community.
 
 ## TODOs
 
-- Shining `PSR-2-R` and `FIG-R` badges for the READMEs.
 - PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards).
-- Undeceive more lost souls.
-- Help to make the FIG people understand what damage they caused (despite all the good things they broad, of course^^).
+- Undeceive more lost souls. If everyone used PSR-2-R FIG would have to revise their standard.
+- Help to make the FIG people understand what errors they made (and as a result damage they caused by deliberately forming an inconsistent standard) and how they can rectify them.
 
 ## Proposing a Standard Recommendation
 

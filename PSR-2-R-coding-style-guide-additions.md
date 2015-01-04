@@ -34,6 +34,13 @@ class Foo {
 }
 ```
 
+## Structure
+- Use parentheses when instantiating classes regardless of the number of arguments the constructor has.
+- Declare class properties before methods.
+- Declare public methods first, then protected ones and finally private ones.
+The exceptions (when using PHPUnit) to this rule are the class constructor and the `setUp` and `tearDown` methods of PHPUnit tests,
+which should always be the first methods to increase readability.
+
 ## Traits
 
 Traits are treated as classes.
@@ -311,12 +318,14 @@ For PHPUnit:
 
 For additional tags see [phpDocumentator](http://phpdoc.org/).
 
+The `@package` and `@subpackage` annotations are not used.
+
 ### Variable types
 Variable types for use in DocBlocks:
 
 * `mixed` - A variable with undefined (or multiple) type.
 * `int` - Integer type variable (whole number).
-* `float` - Float type (point number).
+* `float` - Float/Double/Real type (point number).
 * `bool` - Logical type (true or false).
 * `string` - String type (any value in `""` or `''`).
 * `null` - Null type. Usually used in conjunction with another type.
@@ -358,6 +367,12 @@ public function foo() {
     return $this;
 }
 ```
+
+## Naming Conventions
+- Use namespaces for all classes.
+- Suffix interfaces with `Interface`.
+- Suffix traits with `Trait`.
+- Suffix exceptions with `Exception`.
 
 ## Writing better code
 
