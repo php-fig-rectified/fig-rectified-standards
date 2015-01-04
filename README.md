@@ -24,7 +24,7 @@ This addresses this issue in the PHP community.
 
 - [PSR-2-R](PSR-2-R-coding-style-guide.md) - "PSR-2 with tabs and consistent brace style"
 - [PSR-2-R Additions](PSR-2-R-coding-style-guide-additions.md) - optional coding standard recommendations
-- [Reasoning](Reasoning.md) behind it and a spaces-vs-tabs evaluation
+- [Reasoning](Reasoning.md) behind it and a Spaces-vs-Tabs and Brace-Styles evaluation
 
 ### Badge
 [![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
