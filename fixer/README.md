@@ -33,4 +33,3 @@ render the custom finder and its exludes useless:
 
 - Cleanup (maybe into small files)
 - Add tests
-- Find out what the issue is with ` [LogicException] You must call one of in() or append() methods before iterating over a Finder.`
