@@ -52,7 +52,7 @@ You can copy this snippet:
 
 ## TODOs
 
-- PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards).
+- PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards) and [this](fixer/README.md).
 - Undeceive more lost souls. If everyone used PSR-2-R, FIG would have to revise their standard.
 - Help to make the FIG people understand what errors they made (and as a result damage they caused by deliberately forming an inconsistent standard) and how they can rectify them.
 
