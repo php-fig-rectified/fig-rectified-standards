@@ -19,7 +19,7 @@ If you take a look, most websites actually still don't compress their output.
 
 ### Cursor/Usability
 Easier keyboard navigation for starters.
-It may seem minor, but positionning the text cursor with the mouse at the beginning of the line is
+It may seem minor, but positioning the text cursor with the mouse at the beginning of the line is
 really annoying when indentation is made of spaces! Pro-spaces would reply: "use home". No kidding.
 
 ### Readability
@@ -31,6 +31,13 @@ Without a proper editor you will kind of kill your space key on the keyboard (an
 SHIFT+TAB for decrementing indentation made of spaces does not work in every editor around there (for example, Aptana 2 does not handle it by default, you would have to add a plugin for that probably) - if we start to make this an IDE war.
 So in the end it's just so much easier everywhere to use a single char here.
 
+Also, often times, you find the need to open/edit a file without the space-handling IDE, e.g. when using
+a GIT diff viewer or some other tool that does not have te full IDE spectrum.
+In those cases, if you only want to add something pretty quick, the programs force you to
+type 4x the amount and to hit the keyboard space-key like crazy.
+Using tab is supported across all applications and programs - and works as expected.
+
+### Details
 A more detailed list [here](http://base.thomashigginbotham.com/tabs-vs-spaces-why-is-there-a-debate/).
 
 ## Pro Arguments for Spaces?
