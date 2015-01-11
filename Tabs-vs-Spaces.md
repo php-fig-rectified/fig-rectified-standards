@@ -9,7 +9,7 @@ Ordered by priority:
 Tabs allow for fewer (and easier to spot) indentation mistakes (think about 3 or 5 spaces instead of 4).
 
 ### Configurable Indentation Preferences
-Each developer can configure their environment to use a specific tab width he is used to. He does not
+Each developer can configure his environment to use a specific tab width he is used to. He does not
 have to adjust to a team's preference when switching teams. This helps productivity as consistent
 behavior helps speed up recognition.
 
