@@ -1,8 +1,9 @@
-# PHPCSFixer version for PSR-2-R
+# PHP-CS-Fixer version for PSR-2-R
 
 ## Install
 Drop the `.php_cs` (+ additions) file into your ROOT project dir (where your `composer.json` is) and
-put the freshly downloaded `php-cs-fixer.phar` in there along with it.
+put the freshly downloaded `php-cs-fixer.phar` from [FriendsOfPHP/PHP-CS-Fixer](https://github.com/FriendsOfPHP/PHP-CS-Fixer)
+in there along with it.
 
 You might want to adjust the `->exclude()` calls to fit your application/project.
 
