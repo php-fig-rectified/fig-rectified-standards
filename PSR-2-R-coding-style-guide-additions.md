@@ -59,7 +59,7 @@ $variable = isset($options['variable']) ? $options['variable'] : true;
 ```
 
 ## Control Structures
-Do not use keyword control structures. Use parantheses instead for consistency across all files:
+Do not use keyword control structures. Use curly brackets instead for consistency across all files:
 
 ```php
 // Bad
@@ -73,6 +73,10 @@ if ($isAdmin) {
 }
 
 ```
+Most IDEs even nowadays can't show start/end for keywords, with brackets it always works in pretty much every IDE, though.
+
+If you intend to use the keywords in template files, you should at least be consistent and use them througout the files.
+But in general it is better to also stick to curly brackets here for consistency throughout the codebase.
 
 ## PHP Open Tags
 Always use `<?php` instead of `<?`.
