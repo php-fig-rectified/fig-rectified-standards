@@ -434,7 +434,7 @@ $this->callToSomeProtectedMethod();
 ```
 At first glance it will always be impossible to know what visibility the property or method has.
 
-So it is encouraged to stick to that useful practice to prefix:
+So it is possible to stick to that useful practice to prefix:
 ```php
 $x = $this->someAttribute;
 $x = $this->_someProtectedAttribute;
@@ -443,10 +443,10 @@ $this->callToSomeMethod();
 $this->_callToSomeProtectedMethod();
 ```
 
-Note that `__` is also used for magic calls, and as such this recommendation is best used with the above hint of not using
+Note that `__` is also used for magic calls, and as such this recommendation is best used with the above hint of *not* using
 private visibility in your code.
 Otherwise please disregard and make sure you use an IDE that can display them properly. Using underscores with a lot of
-private methods will probably be worse than sticking to the PSR-2 recoommendation.
+private methods will probably be worse than sticking to the PSR-2 recommendation.
 
 ### Return void vs null
 Try to document `@return void` when there is just a `return;`, whereas `return null;` or `return $this->foo();` would be
