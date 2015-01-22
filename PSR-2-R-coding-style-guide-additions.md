@@ -195,13 +195,15 @@ All operators should go in the newline as first character:
 $foo = 'Some String'
 	. ' concatinated';
 
-if (($a == $b)
+if (
+	($a == $b)
 	&& ($b == $c)
 	|| (Foo::CONST == $d)
 ) {
 	$a = $d;
 }
 ```
+Multi-line control structures should have the parentheses in their own lines (similar to classes and methods).
 
 ### Careful with deep arrays
 One mistaked that gets often made:
