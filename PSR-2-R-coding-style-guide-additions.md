@@ -566,3 +566,9 @@ div.important {
     font-size: 14px;
 }
 ```
+
+### JS
+Ideally, JS related classes are prefixed with `js-` to separate them from the rest of the CSS and styling related class names:
+```html
+<div class="js-widget-toggle">...</div>
+```
