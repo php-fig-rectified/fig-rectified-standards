@@ -70,6 +70,55 @@ define('T_CLOSE_SHORT_ARRAY', 1051);
 define('T_GOTO_LABEL', 1052);
 
 /**
+ */
+class CommaSpacingFixer extends AbstractFixer {
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function getDescription() {
+		return 'Add space after comma in lists';
+	}
+
+	/**
+	 * {@inheritdoc}
+	 */
+	public function fix(\SplFileInfo $file, $content) {
+		$tokens = Tokens::fromCode($content);
+
+		for ($index = $tokens->count() - 1; $index >= 0; --$index) {
+			$token = $tokens[$index];
+			if (trim($token->getContent()) === '') {
+				continue;
+			}
+
+			$prevIndex = $tokens->getPrevNonWhitespace($index);
+			if (!$prevIndex) {
+				continue;
+			}
+			$prevToken = $tokens[$prevIndex];
+			$content = $prevToken->getContent();
+			if ($content !== ',') {
+				continue;
+			}
+
+			if ($prevIndex === $index - 1) {
+				// We need to add a space
+				$tokens->insertAt($index, new Token(array(T_WHITESPACE, ' ')));
+				//$token->setContent(' ' . $token->getContent());
+			}
+		}
+
+		return $tokens->generateCode();
+	}
+
+	public function getLevel() {
+		return 0;
+
+	}
+}
+
+/**
  * @author Ceeram <ceeram@cakephp.org>
  */
 class PhpdocIndentFixer extends AbstractFixer

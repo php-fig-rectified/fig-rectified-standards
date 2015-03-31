@@ -13,7 +13,9 @@ $finder = Symfony\CS\Finder\DefaultFinder::create()
 	->exclude('plugins')
 	->exclude('logs')
 	->exclude('tmp')
+	->exclude('bin')
 	->exclude('config/Migrations')
+	->name('/\.(?:ctp|php)$/')
 	->in(__DIR__);
 
 $config = Symfony\CS\Config\Config::create()
@@ -76,13 +78,14 @@ $config = Symfony\CS\Config\Config::create()
 		));
 
 $config->addCustomFixer(new UseTabsFixer());
-$config->addCustomFixer(new ConsistentBracesFixer());
+//$config->addCustomFixer(new ConsistentBracesFixer()); // Until https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/935/ is fixed
 $config->addCustomFixer(new NoSpacesCastFixer());
 $config->addCustomFixer(new ShortCastFixer());
 $config->addCustomFixer(new IsIntFixer());
 $config->addCustomFixer(new IsWritableFixer());
 $config->addCustomFixer(new ConditionalExpressionOrderFixer());
 $config->addCustomFixer(new PhpdocFixer());
+$config->addCustomFixer(new CommaSpacingFixer());
 
 //FIX
 $config->addCustomFixer(new PhpdocIndentFixer());
