@@ -81,7 +81,7 @@ But in general it is better to also stick to curly brackets here for consistency
 ## PHP Open Tags
 Always use `<?php` instead of `<?`.
 
-Do not use the `<?= ... =>` short tags. They are also difficult to comment out if desired.
+Avoid using the `<?= ... ?>` short tags. They are also difficult to comment out if desired.
 It is better to consistently use
 ```html
 This <?php echo h($var); ?>
@@ -170,9 +170,9 @@ one-tab indents for multiline aligments.
 ### Strings and Concatination
 
 `'` or `"`? Both work, as long as they are used consistent throughout a file.
-It is recommended to use the single `'` – as `"` is for HTML attributes and parses variables.
+It is recommended to use the single `'` â€“ as `"` is for HTML attributes and parses variables.
 
-Don't use variables inside strings – they are better splitted like that:
+Don't use variables inside strings â€“ they are better splitted like that:
 ```php
 echo 'A string with ' . $someVariable . ' and ' . SOME_CONSTANT . '!';
 echo '<a href="example.org" title="' . $title . '">Link</a>';
@@ -543,16 +543,16 @@ Definition ideally as dashed name:
 - class: .some-class-name
 - id: #some-id-to-an-element
 
-Both with lowercase characters (although classes are not case-sensitive, id’s are!), the separator is minus [-].
+Both with lowercase characters (although classes are not case-sensitive, id's are!), the separator is minus [-].
 You can use underscore [_] if it makes the separation of the identifier and the record id easier. E.g. `my-id_33`.
 It will become necessary to do so if you use UUIDs (which contain minus chars).
 
-Note: ids should be unique on the current page – so don’t use them for iterating elements.
+Note: ids should be unique on the current page - so don't use them for iterating elements.
 In general all styling should be class based. Ids are often abused for that.
 But they usually serve the purpose of being identifiable via JS.
 So they should ideally be mainly used for dynamic JS scripts.
 
-Do not name the fields after their style, but after the function/meaning – as the style
+Do not name the fields after their style, but after the function/meaning - as the style
 can change and will result in things like `.red { color: yellow;}`.
 
 Good Example:

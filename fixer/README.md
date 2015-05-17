@@ -13,7 +13,7 @@ You should then be able to run:
     php php-cs-fixer.phar [command] --config-file=.php_cs
 
 You can also add a custom path to run, but note that this would
-render the custom finder and its exludes useless:
+render the custom finder and its excludes useless:
 
     php php-cs-fixer.phar [command] --config-file=.php_cs /path
 
