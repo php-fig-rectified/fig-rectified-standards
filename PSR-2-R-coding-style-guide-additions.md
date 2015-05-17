@@ -92,7 +92,7 @@ Commenting out with `<!--  -->` should be avoided as it is then visible in the r
 
 ## Comparison
 
-Always try to be as strict as possible. If a none strict test is deliberate it might be
+Always try to be as strict as possible. If a non-strict test is deliberate it might be
 wise to comment it as such to avoid confusing it for a mistake.
 
 For testing if a variable is null, it is recommended to use a strict check:
