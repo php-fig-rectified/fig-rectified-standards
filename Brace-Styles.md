@@ -2,7 +2,7 @@
 - Allman: Opening braces on next line
 - 1TBL (One True Brace Style): Opening braces on the same line
 
-Another holy war if its own.
+Another holy war on its own.
 
 - Allman: Opening braces on next line
 - 1TBL (One True Brace Style): Opening braces on the same line
