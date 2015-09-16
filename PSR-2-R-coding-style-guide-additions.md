@@ -6,7 +6,7 @@ These additions are totally optional. There was a void in the style guide so far
 regarding these additions and as such are notices here as best practice recommendations.
 
 [PSR-2-R]: PSR-2-coding-style-guide.md
-
+a
 Note that `[` and `]` (PHP5.4+) are used instead of `array(` and `)` for array declaration;
 
 ## Use Declarations
@@ -127,13 +127,13 @@ Especially with not using Yoda conditions one should never use single `=` inside
 So avoid conditional assigments:
 ```php
 // Conditional assigment not recommended
-if ($variable = $this->foo()) {
+if (($variable = $this->foo()) === null) {
     // ...
 }
 
 // Recommended
 $variable = $this->foo()
-if ($variable) {
+if ($variable === null) {
     // ...
 }
 ```
