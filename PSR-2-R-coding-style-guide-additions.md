@@ -122,6 +122,22 @@ Consistenty is key here. The project should use one througout the code. In gener
 `is_int()` should be used instead of `is_integer()`.
 Use `is_writable()` instead of `is_writeable()`.
 
+### Avoid conditional assigment
+Especially with not using Yoda conditions one should never use single `=` inside conditions.
+So avoid conditional assigments:
+```php
+// Conditional assigment not recommended
+if ($variable = $this->foo()) {
+    // ...
+}
+
+// Recommended
+$variable = $this->foo()
+if ($variable) {
+    // ...
+}
+```
+
 ## Whitespace
 
 * Please use "trim-right" in your IDE settings to avoid unnecessary trailing white space.
