@@ -132,7 +132,7 @@ if (($variable = $this->foo()) === null) {
 }
 
 // Recommended
-$variable = $this->foo()
+$variable = $this->foo();
 if ($variable === null) {
     // ...
 }
