@@ -6,7 +6,7 @@ The idea behind the group is to address errors made in the actual FIG PSRs and t
 before it's too late.
 ~~If other folks want to adopt what we are doing they are welcome to do so, but that is not the aim.~~
 If other folks feel forced to adopt what we're doing they are welcome to
-do so, and the most certainly will. Right?
+do so, and they most certainly will. Right?
 
 ## Why FIG-R and PSR-2-R?
 
