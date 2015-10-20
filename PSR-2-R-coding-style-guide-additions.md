@@ -588,3 +588,30 @@ Ideally, JS related classes are prefixed with `js-` to separate them from the re
 ```html
 <div class="js-widget-toggle some-styling-class">...</div>
 ```
+
+## Further considerations
+While so far the main focus was on the developer (readability), there are some additional optional guidelines that can help to further reduce diff size on code modification (maintainability).
+Those can and should be automated, though, as there is no point in forcing the developer to take care of those manually.
+
+The main idea is to keep each line independant from the others so removing or adding lines has minimal impact.
+
+### Multi-line arrays
+Arrays that span across multiple lines can have a trailing comma to make sure that adding new rows does not change the previous row, as well.
+```php
+$array = [
+	'first',
+	'second', // Note the trailing comma
+];
+```
+
+### Multi-line logic
+For longer logic (method calls, operations) it can be helpful to put the trailing semicolon at the next line. Especially for fluid programming this will not show the previous row as modified.
+
+```php
+$Object
+	->doFirst()
+	->doSecond()
+;
+```
+This would also be consistent to the symmetric bracket placing in general.
+

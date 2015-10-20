@@ -58,10 +58,20 @@ $config = Symfony\CS\Config\Config::create()
 			'function_call_space',
 			'elseif',
 			//'phpdoc_indent', // broken right now
+			'phpdoc_scalar',
+			'phpdoc_no_package',
+			'phpdoc_no_access',
+			'phpdoc_trim',
+			'phpdoc_type_to_var',
+			'phpdoc_var_without_name',
+			'single_quote',
 
 			// Contrib
 			'concat_with_spaces',
 			'ordered_use',
+
+			// Optional
+			'multiline_array_trailing_comma',
 
 			// Custom
 			// see below
@@ -72,7 +82,7 @@ $config = Symfony\CS\Config\Config::create()
 			// Soon
 			'single_line_after_imports', // https://github.com/FriendsOfPHP/PHP-CS-Fixer/pull/816
 
-			// Definitly NOT
+			// Definitely NOT
 			//'indentation',
 			//'braces',
 		));
