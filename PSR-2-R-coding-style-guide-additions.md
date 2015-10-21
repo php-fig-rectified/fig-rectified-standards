@@ -326,7 +326,7 @@ Required tags for each function/method are:
 
 in this order.
 
-Constructors/decontructors may not have a `@return` statement,
+Constructors/destructors may not have a `@return` statement,
 as they by definition should not return anything.
 
 Additionally these may be useful:
@@ -428,6 +428,30 @@ public function foo($input, $anotherInput = null) {
 }
 
 ```
+
+### Avoid no-op methods
+```php
+// Bad
+public function foo($input = null) {
+	if ($input === null) {
+		return;
+	}
+	...
+}
+
+// Good
+public function foo($input) {
+	if ($input === null) {
+    		return;
+    	}
+    	...
+}
+
+```
+The first would allow no-ops like `$this->foo()` which does not do any operation at all.
+So semantically this makes no sense. In this case no default value may be used and a first argument is actually required
+for the first if statement to make sense (`$this->foo($requiredArgument)`). You can still pass null, of course, to break out early.
+Default values may only be used if their usage does make this method still do an operation (apart from returning early).
 
 ### Avoid `private` for class methods/properties
 Most of the time `private` is used too eagerly, where `protected` would suffice.
