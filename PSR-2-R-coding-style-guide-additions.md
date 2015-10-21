@@ -442,9 +442,9 @@ public function foo($input = null) {
 // Good
 public function foo($input) {
 	if ($input === null) {
-    		return;
-    	}
-    	...
+		return;
+	}
+	...
 }
 
 ```
