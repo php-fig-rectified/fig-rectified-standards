@@ -10,7 +10,8 @@ do so, and they most certainly will. Right?
 
 ## Why FIG-R and PSR-2-R?
 
-Because it seems to be necessary.
+Because it seems to be necessary. Coding standards should not evolve out of political decisions, but reasonable
+arguments.
 
 First of all FIG itself did make mistakes in their drafts resulting in a *wrong* standard now.
 They knew it and always talked it down as "internal group decisions" not affecting the rest of the PHP
@@ -52,9 +53,11 @@ You can copy this snippet:
 [psr3]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-3-logger-interface.md
 [psr4]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-4-autoloader.md
 
+## Code Sniffer and Fixer
+Check out the [psr2r-sniffer](https://github.com/php-fig-rectified/psr2r-sniffer) repo, which contains a sniffer that can not only report all CS issues but also auto-fix most of them.
+
 ## TODOs
 
-- PHPCS-Fixer CodeSniffer branch for this - currently there is [this](https://github.com/dereuromark/codesniffer-standards) and [this](fixer).
 - Undeceive more lost souls. If everyone used PSR-2-R, FIG would have to revise their standard.
 - Help to make the FIG people understand what errors they made (and as a result damage they caused by deliberately forming an inconsistent standard) and how they can rectify them.
 
