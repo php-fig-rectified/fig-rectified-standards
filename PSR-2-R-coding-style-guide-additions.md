@@ -275,7 +275,7 @@ Note that if you want to allow $array to be also an instance of ArrayObject you 
 /**
  * Some method description.
  *
- * @param array|ArrayObject $array Some array value.
+ * @param array|\ArrayObject $array Some array value.
  */
 public function foo($array) {
 }
@@ -347,7 +347,7 @@ The `@package` and `@subpackage` annotations are not used.
 ### Variable types
 Variable types for use in DocBlocks:
 
-* `mixed` - A variable with undefined (or multiple) type.
+* `mixed` - A variable with undefined (or multiple) type. Shall be avoided where possible.
 * `int` - Integer type variable (whole number).
 * `float` - Float/Double/Real type (point number).
 * `bool` - Logical type (true or false).
@@ -389,6 +389,21 @@ When returning the object itself, e.g. for chaining, one should use `$this` inst
  */
 public function foo() {
     return $this;
+}
+```
+This is especially important for IDEs, as they otherwise do not support chaining.
+
+Always use FQCN (fully qualified class names) for class names in DocBlocks:
+```php
+/**
+ * Foo function.
+ *
+ * @param \OtherNamespace\SubNamespace\ClassName|null
+ *
+ * @return \MyNamespace\MyClass
+ */
+public function foo(ClassName $class = null) {
+    return $this->bar($class);
 }
 ```
 
@@ -493,8 +508,7 @@ Otherwise please disregard and make sure you use an IDE that can display them pr
 private methods will probably be worse than sticking to the PSR-2 recommendation.
 
 ### Return void vs null
-Try to document `@return void` when there is just a `return;`, whereas `return null;` or `return $this->foo();` would be
-`@return null` or alike.
+`@return void` shall be used to document whhen a method is expected not to return anything, and when there is just a `return;` as "early return". Explicitly returning with `return null;` or `return $this->foo();` shall be documented be as `@return null` etc.
 
 ```php
 /**
@@ -523,6 +537,7 @@ public function get($var) {
 	return $this->config[$var];
 }
 ```
+Mixing void and other types must not be used, as a method cannot be expected to return and not return at the same time. Use `null` here instead: `@return \MyObject|null`.
 
 ## Example Addresses
 For all example URL and mail addresses use `example.com`, `example.org` and `example.net`, for example:
