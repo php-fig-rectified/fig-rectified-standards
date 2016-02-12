@@ -14,12 +14,12 @@ only a single tab is the right way to do it.
 Any IDE can make a tab as "wide" as you prefer, with spaces this is not that easy.
 It can also quickly go wrong.
 
-See [Tabs vs. Spaces](Tabs-vs-Spaces.md).
+See [Tabs vs. Spaces](Reasoning-Tabs-vs-Spaces.md).
 
 Also see [the two answers that should have been checked](http://programmers.stackexchange.com/questions/57/tabs-versus-spaces-what-is-the-proper-indentation-character-for-everything-in-e) for details.
 
 ## Brace style
-See [Brace Styles](Brace-Styles.md).
+See [Brace Styles](Reasoning-Brace-Styles.md).
 ## Additions
 Many topics have not been addressed in the FIG PSR-2 (which is not a bad thing), but this might leave a void
 or indeterminacy. Those recommendations are mainly based on the CakePHP1+2 coding standards (as well as both topics above)
