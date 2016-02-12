@@ -56,7 +56,7 @@ X
 	Y
 X
 ```
-As one can cleary see, the single line is totally enough.
+As one can clearly see, the single line is totally enough.
 
 As for methods, compare:
 ```php
@@ -131,3 +131,34 @@ class Foo
 }
 ```
 
+## Another inconsistency inside PSR-2: Multiline
+PSR-2 is even inconsistent inside the method declaration itself.
+
+Single line statements in PSR-2 would be:
+```php
+public function sampleFunction($a, $b = null) 
+{
+	...
+}
+```
+Intuitively you would expect the curly brackets to be always on a new line:
+```php
+public function sampleFunction(
+	$a, 
+	$b = null
+) 
+{
+	...
+}
+```
+
+But in fact for multiline statements, it suddenly behaves like PSR-2-R does:
+```php
+public function sampleFunction(
+	$a,
+	$b = null
+) {
+	...
+}
+```
+Why not then using *a* consistent way of doing it right away?
