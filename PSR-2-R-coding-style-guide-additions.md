@@ -260,7 +260,7 @@ Arguments that expect objects, arrays or callbacks (callable) can be typehinted.
 /**
  * Some method description.
  *
- * @param Model $Model The model to use.
+ * @param \Some\Model $Model The model to use.
  * @param array $array Some array value.
  * @param callable $callback Some callback.
  * @param bool $boolean Some boolean value.
@@ -508,7 +508,7 @@ Otherwise please disregard and make sure you use an IDE that can display them pr
 private methods will probably be worse than sticking to the PSR-2 recommendation.
 
 ### Return void vs null
-`@return void` shall be used to document whhen a method is expected not to return anything, and when there is just a `return;` as "early return". Explicitly returning with `return null;` or `return $this->foo();` shall be documented be as `@return null` etc.
+`@return void` shall be used to document when a method is expected not to return anything, and when there is just a `return;` as "early return". Explicitly returning with `return null;` or `return $this->foo();` shall be documented be as `@return null` etc.
 
 ```php
 /**
