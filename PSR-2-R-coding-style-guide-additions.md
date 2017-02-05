@@ -317,7 +317,7 @@ $this->doSomehing();
 Comment blocks, with the exception of the first block in a file, should always be preceded by a newline.
 
 ### Tags
-Required tags for each function/method are:
+Recommended tags for each function/method are:
 
 * `@param` if applicable
 * `@return`
