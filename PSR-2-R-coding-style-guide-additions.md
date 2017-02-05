@@ -183,7 +183,7 @@ would be named longer, renaming all involved and aligned variables with it. Bad 
 The second example would result in the same issue. So always use simple spaces for inline and
 one-tab indents for multiline aligments.
 
-### Strings and Concatination
+### Strings and Concatenation
 
 `'` or `"`? Both work, as long as they are used consistent throughout a file.
 It is recommended to use the single `'` – as `"` is for HTML attributes and parses variables.
