@@ -79,14 +79,17 @@ If you intend to use the keywords in template files, you should at least be cons
 But in general it is better to also stick to curly brackets here for consistency throughout the codebase.
 
 ## PHP Open Tags
-Always use `<?php` instead of `<?`.
+Always use `<?php` or `<?=` instead of `<?`.
 
-Avoid using the `<?= ... ?>` short tags. They are also difficult to comment out if desired.
-It is better to consistently use
+The `<?=` form should be used for echoing values of simple variables while the `<?php` form can be used for more complex code.
+
+The short form is supported by the newest PHP versions as well and it makes your files less verbose, thus easier to read. It doesn't even require the semicolon (`;`) so feel free to omit it. 
 ```html
-This <?php echo h($var); ?>
-
-Another <?php //echo h($var); ?> commented out one
+This <?= $x ?> way.
+```
+If you want to comment it out then you can do it easily:
+```html
+This <?//= $x ?> way.
 ```
 Commenting out with `<!--  -->` should be avoided as it is then visible in the resulting HTML output.
 
