@@ -51,10 +51,10 @@ Longer ternaries should be split into if else statements. Ternary operators shou
 Optionally parentheses can be used around the condition check of the ternary for clarity:
 
 ```php
-// Nested ternaries are bad
+// Nested ternaries are bad.
 $variable = isset($options['variable']) ? isset($options['othervar']) ? true : false : false;
 
-// Good, simple and readable
+// Good, simple and readable.
 $variable = isset($options['variable']) ? $options['variable'] : true;
 ```
 
@@ -62,12 +62,12 @@ $variable = isset($options['variable']) ? $options['variable'] : true;
 Do not use keyword control structures. Use curly brackets instead for consistency across all files:
 
 ```php
-// Bad
+// Bad.
 if ($isAdmin):
 	echo '<p>You are the admin user.</p>';
 endif;
 
-// Good
+// Good.
 if ($isAdmin) {
 	echo '<p>You are the admin user.</p>';
 }
@@ -100,7 +100,7 @@ wise to comment it as such to avoid confusing it for a mistake.
 
 For testing if a variable is null, it is recommended to use a strict check:
 ```php
-// Faster and easier than is_null() call
+// Faster and easier than is_null() call.
 if ($value === null) {
       // ...
 }
@@ -108,12 +108,12 @@ if ($value === null) {
 
 The value to check against should be placed on the right side:
 ```php
-// Yoda style not recommended
+// Yoda style not recommended.
 if (null === $this->foo()) {
     // ...
 }
 
-// Recommended for better (human) readability
+// Recommended for better (human) readability.
 if ($this->foo() === null) {
     // ...
 }
@@ -129,12 +129,12 @@ Use `is_writable()` instead of `is_writeable()`.
 Especially with not using Yoda conditions one should never use single `=` inside conditions.
 So avoid conditional assigments:
 ```php
-// Conditional assigment not recommended
+// Conditional assigment not recommended.
 if (($variable = $this->foo()) === null) {
     // ...
 }
 
-// Recommended
+// Recommended.
 $variable = $this->foo();
 if ($variable === null) {
     // ...
@@ -153,11 +153,11 @@ above and below each method.
 class Foo extends Bar implements FooInterface {
 
 	public function foo($a, $b = null) {
-		// Code here
+		// Code here.
 	}
 
 	public function bar() {
-		// Method body
+		// Method body.
 	}
 
 }
@@ -423,7 +423,7 @@ public function foo(ClassName $class = null) {
 
 ### Example for return early
 ```php
-// Bad
+// Bad.
 public function foo($input, $anotherInput = null) {
 	if ($input) {
 		if ($anotherInput) {
@@ -436,12 +436,12 @@ public function foo($input, $anotherInput = null) {
 	return false;
 }
 
-// Good
+// Good.
 public function foo($input, $anotherInput = null) {
 	if (!$input || !$anotherInput || $anotherInput !== $input) {
 		return false;
 	}
-	// Code
+	// Code.
 	return true;
 }
 
@@ -449,7 +449,7 @@ public function foo($input, $anotherInput = null) {
 
 ### Avoid no-op methods
 ```php
-// Bad
+// Bad.
 public function foo($input = null) {
 	if ($input === null) {
 		return;
@@ -457,7 +457,7 @@ public function foo($input = null) {
 	...
 }
 
-// Good
+// Good.
 public function foo($input) {
 	if ($input === null) {
 		return;
