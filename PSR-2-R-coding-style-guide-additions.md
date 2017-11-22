@@ -227,7 +227,7 @@ if (
 ```
 
 ### Careful with deep arrays
-One mistaked that gets often made:
+One mistake that often gets made:
 ```php
 $foo = [[
 	0,
