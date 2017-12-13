@@ -314,7 +314,7 @@ Inline code should use `//` and a single space afterwards.
 Use sentences with a capital first letter and a full stop if possible:
 ```php
 // This is a nice inline comment.
-$this->doSomehing();
+$this->doSomething();
 ```
 
 Comment blocks, with the exception of the first block in a file, should always be preceded by a newline.
