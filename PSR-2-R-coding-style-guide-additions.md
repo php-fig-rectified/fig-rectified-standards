@@ -212,7 +212,7 @@ $myString = 'a string' . $variable . 'more string stuff etc';
 All operators should go in the newline as first character:
 ```php
 $foo = 'Some String'
-	. ' concatinated';
+	. ' concatenated';
 ```
 
 Multi-line control structures should have the parentheses in their own lines (similar to classes and methods):
@@ -234,7 +234,7 @@ $foo = [[
 	1, 2
 ], 3, 4];
 ```
-This would effectivly change all lines (and their indentation), if the array structure got normalized.
+This would effectively change all lines (and their indentation), if the array structure got normalized.
 Arrays also need to minimize effects on the resulting diff, and as such indentation must always be the right one:
 ```php
 $foo = [[
