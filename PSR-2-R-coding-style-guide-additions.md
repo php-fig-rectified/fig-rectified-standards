@@ -20,17 +20,17 @@ The first should only be used for objects. In some cases properties can also be 
 but should be avoided if possible.
 
 ```php
-class Foo {
+class Foo
+{
+    public $RequestHandler;
 
-	public $RequestHandler;
+    protected $isBool;
 
-	protected $isBool;
-
-	public function foo($countVar, MyObject $MyObject) {
-		$countVar++;
-		$MyObject->bar();
-	}
-
+    public function foo($countVar, MyObject $MyObject)
+    {
+        $countVar++;
+        $MyObject->bar();
+    }
 }
 ```
 
@@ -64,12 +64,12 @@ Do not use keyword control structures. Use curly brackets instead for consistenc
 ```php
 // Bad.
 if ($isAdmin):
-	echo '<p>You are the admin user.</p>';
+    echo '<p>You are the admin user.</p>';
 endif;
 
 // Good.
 if ($isAdmin) {
-	echo '<p>You are the admin user.</p>';
+    echo '<p>You are the admin user.</p>';
 }
 
 ```
@@ -102,7 +102,7 @@ For testing if a variable is null, it is recommended to use a strict check:
 ```php
 // Faster and easier than is_null() call.
 if ($value === null) {
-      // ...
+    // ...
 }
 ```
 
@@ -150,16 +150,16 @@ environments
 above and below each method.
 
 ```php
-class Foo extends Bar implements FooInterface {
+class Foo extends Bar implements FooInterface
+{
+    public function foo($a, $b = null)
+    {
+        // Code here.
+    }
 
-	public function foo($a, $b = null) {
-		// Code here.
-	}
-
-	public function bar() {
-		// Method body.
-	}
-
+    public function bar() {
+        // Method body.
+    }
 }
 
 ```
@@ -171,7 +171,8 @@ a) Not useful in combination with tabs as indentation (and personal length adjus
 b) Very bad for change diffs, as it creates a lot of noise. It is also additional work.
 
 ```php
-public function bar() {
+public function bar()
+{
 	$foo = 'bar';
 	$bazdib = 'gir';
 	$zim = 'irk';
@@ -424,25 +425,27 @@ public function foo(ClassName $class = null) {
 ### Example for return early
 ```php
 // Bad.
-public function foo($input, $anotherInput = null) {
-	if ($input) {
-		if ($anotherInput) {
-			if ($anotherInput === $input) {
-				// Code
-				return true;
-			}
-		}
-	}
-	return false;
+public function foo($input, $anotherInput = null)
+{
+    if ($input) {
+        if ($anotherInput) {
+            if ($anotherInput === $input) {
+                // Code
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 // Good.
-public function foo($input, $anotherInput = null) {
-	if (!$input || !$anotherInput || $anotherInput !== $input) {
-		return false;
-	}
-	// Code.
-	return true;
+public function foo($input, $anotherInput = null)
+{
+    if (!$input || !$anotherInput || $anotherInput !== $input) {
+        return false;
+    }
+    // Code.
+    return true;
 }
 
 ```
@@ -450,19 +453,21 @@ public function foo($input, $anotherInput = null) {
 ### Avoid no-op methods
 ```php
 // Bad.
-public function foo($input = null) {
-	if ($input === null) {
-		return;
-	}
-	...
+public function foo($input = null)
+{
+    if ($input === null) {
+        return;
+    }
+    ...
 }
 
 // Good.
-public function foo($input) {
-	if ($input === null) {
-		return;
-	}
-	...
+public function foo($input)
+{
+    if ($input === null) {
+        return;
+    }
+    ...
 }
 
 ```
@@ -518,26 +523,31 @@ private methods will probably be worse than sticking to the PSR-2 recommendation
  * @param string $input
  * @return void
  */
-public function setFoo($input) {
-	if (!$input) {
-		return;
-	}
-	if ($input === 'foofoo') {
-		$this->set('special', $input);
-		return;
-	}
-	$this->set('input', $input);
+public function setFoo($input)
+{
+    if (!$input) {
+        return;
+    }
+
+    if ($input === 'foofoo') {
+        $this->set('special', $input);
+        return;
+    }
+
+    $this->set('input', $input);
 }
 
 /**
  * @param string $var
  * @return string|null
  */
-public function get($var) {
-	if (!isset($this->config[$var]) {
-		return null;
-	}
-	return $this->config[$var];
+public function get($var)
+{
+    if (!isset($this->config[$var]) {
+        return null;
+    }
+
+    return $this->config[$var];
 }
 ```
 Mixing void and other types must not be used, as a method cannot be expected to return and not return at the same time. Use `null` here instead: `@return \MyObject|null`.
@@ -641,8 +651,8 @@ The main idea is to keep each line independant from the others so removing or ad
 Arrays that span across multiple lines can have a trailing comma to make sure that adding new rows does not change the previous row, as well.
 ```php
 $array = [
-	'first',
-	'second', // Note the trailing comma
+    'first',
+    'second', // Note the trailing comma
 ];
 ```
 
@@ -651,8 +661,8 @@ For longer logic (method calls, operations) it can be helpful to put the trailin
 
 ```php
 $Object
-	->doFirst()
-	->doSecond()
+    ->doFirst()
+    ->doSecond()
 ;
 ```
 This would also be consistent to the symmetric bracket placing in general.
