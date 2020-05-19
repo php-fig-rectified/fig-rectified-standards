@@ -5,7 +5,7 @@ This guide extends and expands on [PSR-2-R], the basic coding style guide.
 These additions are totally optional. There was a void in the style guide so far
 regarding these additions and as such are notices here as best practice recommendations.
 
-[PSR-2-R]: PSR-2-coding-style-guide.md
+[PSR-2-R]: PSR-2-R-coding-style-guide.md
 a
 Note that `[` and `]` (PHP5.4+) are used instead of `array(` and `)` for array declaration;
 
